@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Hacker Lainnya</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #000000; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .slide-container { 
+            min-height: 100vh;
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            background-color: #000000; 
+            color: white; 
+        }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .hover-border-accent:hover { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Background Pattern */
+        .bg-circuit-pattern {
+            background-color: #000000;
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .domain-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .domain-card:hover {
+            transform: translateY(-4px);
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 4px 20px rgba(99, 109, 85, 0.3);
+            border-color: #636d55;
+        }
+        .domain-card:hover .icon-wrapper {
+            background-color: #636d55;
+            color: white;
+            border-color: #636d55;
+            transform: scale(1.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .slide-container {
+                padding: 20px 15px;
+            }
+            .grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 20px !important;
+            }
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            .main-content {
+                padding: 2rem 0 !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-cols-4 {
+                grid-template-columns: 1fr !important;
+            }
+            h2 {
+                font-size: 2rem !important;
+            }
+            .px-12 {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+            }
+            .py-12 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            .domain-card {
+                padding: 20px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            .px-12 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            .domain-card h3 {
+                font-size: 1.1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-circuit-pattern">
+        <!-- Header -->
+        <div class="px-6 md:px-12 pt-6 md:pt-10 pb-4 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+            <div class="mb-4 md:mb-0">
+                <p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Beyond The Hats</p>
+                <h2 class="text-2xl md:text-4xl font-header font-bold text-white uppercase tracking-tight">
+                    Jenis <span class="text-accent">Hacker Lainnya</span>
+                </h2>
+            </div>
+            <div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+                <i class="fas fa-users-cog"></i>
+                <span>ACTOR TYPES MAP</span>
+            </div>
+        </div>
+        
+        <!-- Main Grid Content -->
+        <div class="flex-1 px-6 md:px-12 py-6 md:py-12 relative z-10 overflow-hidden flex flex-col justify-center main-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- 1. Script Kiddie -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-terminal text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Script Kiddie</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Menggunakan tools/eksploit siap pakai milik orang lain, minim skill teknis.</p>
+                </div>
+                
+                <!-- 2. Hacktivist -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-bullhorn text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Hacktivist</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Melakukan serangan demi motivasi ideologi, politik, atau pesan sosial.</p>
+                </div>
+                
+                <!-- 3. State-Sponsored / APT -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-user-secret text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">State-Sponsored / APT</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Didukung negara, sumber daya besar, fokus pada spionase &amp; sabotase (Advanced Persistent Threat).</p>
+                </div>
+                
+                <!-- 4. Insider Threat -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-id-badge text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Insider Threat</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Ancaman dari orang dalam (karyawan/mantan) dengan akses sah yang menyalahgunakan wewenang.</p>
+                </div>
+                
+                <!-- 5. Cybercriminal Group -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-mask text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Cybercriminal Group</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Organisasi terstruktur dengan motif utama keuntungan finansial (Ransomware, Fraud).</p>
+                </div>
+                
+                <!-- 6. Red Team -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-chess-rook text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Red Team</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Profesional yang mensimulasikan serangan ofensif nyata untuk menguji pertahanan organisasi.</p>
+                </div>
+                
+                <!-- 7. Bug Bounty Hunter -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default hover-border-accent border-l-4 border-l-transparent">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-bug text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Bug Bounty Hunter</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Freelancer yang mencari celah keamanan secara legal demi imbalan uang (Bounty).</p>
+                </div>
+                
+                <!-- 8. Security Researcher -->
+                <div class="domain-card bg-gray-900 bg-opacity-40 border border-gray-800 rounded-lg p-4 md:p-6 flex flex-col items-center justify-center text-center group cursor-default hover-border-accent border-l-4 border-l-transparent">
+                    <div class="icon-wrapper w-12 h-12 md:w-14 md:h-14 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 mb-3 md:mb-4 transition-all duration-300">
+                        <i class="fas fa-microscope text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-base md:text-lg mb-2">Researcher</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">Akademisi atau ahli yang fokus menemukan kerentanan baru (Zero-day) untuk kemajuan ilmu.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+<div class="relative z-20 w-full px-4 md:px-12 py-6 flex justify-between items-center bg-gradient-to-t from-black to-transparent">
+    <!-- Back Button -->
+    <div>
+        <button onclick="window.location.href='pt96.html'" class="bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white px-4 py-2 rounded-md font-mono text-sm transition-colors cursor-not-allowed opacity-50" disabled>
+            <i class="fas fa-chevron-left mr-2"></i>Back
+        </button>
+    </div>
+    
+    <!-- Status Info -->
+    <div class="flex flex-col gap-1 text-xs font-mono text-gray-500">
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span>SYSTEM STATUS: SECURE</span>
+        </div>
+        <p>CONFIDENTIAL // PRESENTATION_MODE</p>
+    </div>
+    
+    <!-- Next Button -->
+    <div>
+        <button onclick="window.location.href='pt98.html'" class="bg-accent hover:bg-opacity-90 text-white px-4 py-2 rounded-md font-mono text-sm transition-colors">
+            Next<i class="fas fa-chevron-right ml-2"></i>
+        </button>
+    </div>
+</div>
+        <!-- Footer -->
+        <div class="px-6 md:px-12 py-4 md:py-6 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center bg-black relative z-20">
+            <div class="flex items-center gap-2 mb-2 md:mb-0">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <p class="text-xs font-mono text-gray-600">SECTION 03: HACKER TYPES</p>
+            </div>
+            <p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+        </div>
+    </div>
+</body>
+</html>

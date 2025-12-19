@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan &amp; Rekomendasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #000000; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .slide-container { 
+            min-height: 100vh;
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            background-color: #000000; 
+            color: white; 
+        }
+        
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Custom Pattern Background */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, #111 1px, transparent 1px),
+                linear-gradient(to bottom, #111 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-color: #000000;
+        }
+
+        .action-card {
+            background-color: #0a0a0a;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .action-card:hover {
+            border-color: #636d55;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(99, 109, 85, 0.3);
+        }
+
+        .cta-button {
+            background-color: #636d55;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #7a8669;
+            box-shadow: 0 0 20px rgba(99, 109, 85, 0.4);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .slide-container {
+                padding: 20px 15px;
+            }
+            .main-content {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            .col-span-4, .col-span-8 {
+                width: 100% !important;
+                border-right: none !important;
+                padding-right: 0 !important;
+            }
+            .grid-cols-3 {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+            .action-card {
+                padding: 20px !important;
+            }
+            .px-12 {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+            }
+            .py-4 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .footer-content {
+                flex-direction: column !important;
+                gap: 20px !important;
+                text-align: center !important;
+            }
+            .footer-links {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem !important;
+            }
+            .px-12 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            .cta-box {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-grid-pattern">
+        <!-- Top Decoration -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gray-900">
+            <div class="w-1/3 h-full bg-accent"></div>
+        </div>
+        
+        <!-- Header -->
+        <div class="px-6 md:px-12 pt-8 md:pt-12 pb-4 md:pb-6 flex flex-col md:flex-row justify-between items-start md:items-end z-10">
+            <div class="mb-4 md:mb-0">
+                <p class="text-accent font-mono text-sm tracking-widest mb-2 uppercase">Kesimpulan</p>
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-header font-bold text-white uppercase tracking-tight leading-none">
+                    Ringkasan &amp; <span class="text-accent">Rekomendasi</span>
+                </h1>
+            </div>
+            <div class="text-right">
+                <p class="text-gray-500 font-mono text-xs">FINAL BRIEFING</p>
+                <p class="text-gray-400 font-mono text-xs">CYBERSECURITY ESSENTIALS</p>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="flex-1 px-6 md:px-12 py-4 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 z-10 main-content">
+            <!-- Left Column: Key Takeaways -->
+            <div class="lg:col-span-4 flex flex-col justify-between pr-0 lg:pr-4 border-r-0 lg:border-r border-gray-900">
+                <div>
+                    <h3 class="text-lg md:text-xl font-header font-bold text-white mb-4 md:mb-6 flex items-center gap-2">
+                        <i class="fas fa-list-check text-accent"></i> Key Takeaways
+                    </h3>
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 rounded bg-gray-900 flex items-center justify-center text-gray-400 flex-shrink-0 border border-gray-800">
+                                <i class="fas fa-shield-virus text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">Ancaman Berkembang</h4>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Cybersecurity bukan tujuan akhir, tapi proses adaptasi terus-menerus terhadap ancaman baru.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 rounded bg-gray-900 flex items-center justify-center text-gray-400 flex-shrink-0 border border-gray-800">
+                                <i class="fas fa-user-shield text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">Peran Hacker</h4>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Tidak semua hacker jahat. White Hat dan Red Team krusial untuk menguji pertahanan kita.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 md:gap-4">
+                            <div class="w-8 h-8 rounded bg-gray-900 flex items-center justify-center text-gray-400 flex-shrink-0 border border-gray-800">
+                                <i class="fas fa-users text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm mb-1">Budaya Keamanan</h4>
+                                <p class="text-gray-400 text-xs leading-relaxed">
+                                    Teknologi saja tidak cukup. Manusia adalah firewall terpenting melalui kesadaran keamanan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Action Plan -->
+            <div class="lg:col-span-8 flex flex-col">
+                <h3 class="text-lg md:text-xl font-header font-bold text-white mb-4 md:mb-6 flex items-center gap-2">
+                    <i class="fas fa-rocket text-accent"></i> Rencana Aksi Praktis
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 md:mb-8">
+                    <!-- Action 1 -->
+                    <div class="action-card p-4 md:p-5 rounded-lg flex flex-col">
+                        <div class="text-accent text-2xl md:text-3xl mb-3 md:mb-4">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-base mb-2">1. Prioritaskan Aset</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3 md:mb-4 flex-grow">
+                            Identifikasi "Crown Jewels" data &amp; sistem Anda. Fokuskan perlindungan maksimal di sana.
+                        </p>
+                        <div class="w-full h-1 bg-gray-800 rounded overflow-hidden">
+                            <div class="h-full w-1/3 bg-accent"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action 2 -->
+                    <div class="action-card p-4 md:p-5 rounded-lg flex flex-col">
+                        <div class="text-accent text-2xl md:text-3xl mb-3 md:mb-4">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-base mb-2">2. Zero Trust</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3 md:mb-4 flex-grow">
+                            "Never Trust, Always Verify." Terapkan MFA, segmentasi jaringan, dan prinsip privilege minimal.
+                        </p>
+                        <div class="w-full h-1 bg-gray-800 rounded overflow-hidden">
+                            <div class="h-full w-2/3 bg-accent"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action 3 -->
+                    <div class="action-card p-4 md:p-5 rounded-lg flex flex-col">
+                        <div class="text-accent text-2xl md:text-3xl mb-3 md:mb-4">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-base mb-2">3. Uji Berkala</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-3 md:mb-4 flex-grow">
+                            Lakukan Penetration Testing &amp; Vulnerability Assessment rutin. Jangan menunggu diserang.
+                        </p>
+                        <div class="w-full h-1 bg-gray-800 rounded overflow-hidden">
+                            <div class="h-full w-full bg-accent"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Box -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 md:p-6 flex flex-col md:flex-row justify-between items-center relative overflow-hidden cta-box">
+                    <div class="absolute -right-10 -top-10 text-7xl md:text-9xl text-black opacity-20 transform rotate-12 pointer-events-none">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="relative z-10 mb-4 md:mb-0">
+                        <p class="text-accent font-mono text-xs uppercase mb-1">ROADMAP 90 HARI</p>
+                        <h3 class="text-xl md:text-2xl font-bold text-white">Mulai Bangun Pertahanan Anda</h3>
+                    </div>
+                    <div class="flex gap-4 relative z-10">
+                        <div class="text-right border-r border-gray-700 pr-4">
+                            <p class="text-white font-bold text-lg">0</p>
+                            <p class="text-gray-500 text-xs">Insiden</p>
+                        </div>
+                        <div class="text-right border-r border-gray-700 pr-4">
+                            <p class="text-white font-bold text-lg">100%</p>
+                            <p class="text-gray-500 text-xs">Compliance</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-white font-bold text-lg">24/7</p>
+                            <p class="text-gray-500 text-xs">Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer / Prominent Branding -->
+        <div class="mt-auto bg-black border-t border-gray-900 px-6 md:px-12 py-6 md:py-8 relative">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 footer-content">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-accent rounded flex items-center justify-center text-black text-xl md:text-2xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-header font-bold text-white tracking-tight">HackDev <span class="text-accent">2025</span></h2>
+                        <p class="text-gray-500 text-xs font-mono">SECURE THE FUTURE</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 md:gap-8 text-gray-400 text-sm footer-links">
+                    <div class="flex items-center gap-2">
+                        <i class="fab fa-github text-accent"></i>
+                        <span class="text-xs md:text-sm">github.com/hackdev</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fab fa-linkedin text-accent"></i>
+                        <span class="text-xs md:text-sm">linkedin.com/in/hackdev</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-envelope text-accent"></i>
+                        <span class="text-xs md:text-sm">contact@hackdev.io</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+<div class="relative z-20 w-full px-4 md:px-12 py-6 flex justify-between items-center bg-gradient-to-t from-black to-transparent">
+    <!-- Back Button -->
+    <div>
+        <button onclick="window.location.href='pt99.html'" class="bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white px-4 py-2 rounded-md font-mono text-sm transition-colors cursor-not-allowed opacity-50" disabled>
+            <i class="fas fa-chevron-left mr-2"></i>Back
+        </button>
+    </div>
+    
+    <!-- Status Info -->
+    <div class="flex flex-col gap-1 text-xs font-mono text-gray-500">
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span>SYSTEM STATUS: SECURE</span>
+        </div>
+        <p>CONFIDENTIAL // PRESENTATION_MODE</p>
+    </div>
+    
+    <!-- Next Button -->
+
+</div>
+            <!-- Copyright Line -->
+            <div class="mt-4 md:mt-6 pt-4 border-t border-gray-900 flex flex-col md:flex-row justify-between text-xs text-gray-600 font-mono gap-2">
+                <p>© 2025 HackDev Security. All rights reserved.</p>
+                <p>Dibuat untuk Presentasi Edukasi Cybersecurity</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

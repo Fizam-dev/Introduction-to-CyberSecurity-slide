@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools &amp; Teknik Cybersecurity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&amp;family=Roboto+Mono:wght@400;500;700&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #000000; 
+            font-family: 'Inter', sans-serif; 
+        }
+        .slide-container { 
+            min-height: 100vh;
+            position: relative; 
+            display: flex; 
+            flex-direction: column; 
+            background-color: #000000; 
+            color: white; 
+        }
+        .text-accent { color: #636d55; }
+        .bg-accent { background-color: #636d55; }
+        .border-accent { border-color: #636d55; }
+        .font-header { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Binary Dot Pattern */
+        .bg-binary-dots {
+            background-color: #050505;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23636d55' fill-opacity='0.15'/%3E%3C/svg%3E");
+        }
+
+        .feature-card {
+            background-color: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(50, 50, 50, 0.5);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #636d55;
+            transform: translateY(-2px);
+        }
+        
+        .icon-wrapper {
+            background-color: rgba(99, 109, 85, 0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .slide-container {
+                padding: 20px 15px;
+            }
+            .main-content {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            .left-column, .right-column {
+                width: 100% !important;
+            }
+            .grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            h2 {
+                font-size: 2.5rem !important;
+            }
+            h3 {
+                font-size: 2rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem !important;
+            }
+            h3 {
+                font-size: 1.75rem !important;
+            }
+            .feature-card {
+                padding: 20px !important;
+            }
+            .px-12 {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+            }
+            .py-6 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.75rem !important;
+            }
+            h3 {
+                font-size: 1.5rem !important;
+            }
+            .px-12 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .text-4xl {
+                font-size: 1.75rem !important;
+            }
+            .text-3xl {
+                font-size: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-binary-dots">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-1/3 h-full pointer-events-none opacity-10 hidden md:block">
+            <svg height="100%" preserveaspectratio="none" viewbox="0 0 400 720" width="100%">
+                <path d="M 400 0 L 0 0 L 100 720 L 400 720 Z" fill="#636d55"></path>
+            </svg>
+        </div>
+        
+        <!-- Header -->
+        <div class="px-6 md:px-12 pt-6 md:pt-10 pb-4 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-900 z-10 bg-black bg-opacity-90">
+            <div class="mb-4 md:mb-0">
+                <p class="text-accent font-mono text-xs tracking-[0.2em] mb-2 uppercase">Cybersecurity Arsenal</p>
+                <h2 class="text-2xl md:text-4xl font-header font-bold text-white uppercase tracking-tight">
+                    Tools &amp; <span class="text-accent">Teknik</span>
+                </h2>
+            </div>
+            <div class="flex items-center gap-2 text-gray-500 font-mono text-xs">
+                <i class="fas fa-toolbox"></i>
+                <span>ETHICAL USAGE ONLY</span>
+            </div>
+        </div>
+        
+        <!-- Main Content Layout -->
+        <div class="flex-1 px-6 md:px-12 py-4 md:py-6 flex flex-col md:flex-row gap-6 md:gap-10 relative z-10 main-content">
+            <!-- Left Column: Overview -->
+            <div class="w-full md:w-1/3 flex flex-col justify-center left-column">
+                <div class="relative mb-6">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-gray-900 border-2 border-accent flex items-center justify-center mb-4 md:mb-6 shadow-[0_0_20px_rgba(99,109,85,0.2)]">
+                        <i class="fas fa-terminal text-3xl md:text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-3xl font-header font-bold text-white mb-4">
+                        Standard Industri
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-sm mb-4">
+                        Penguasaan tools standar industri adalah kewajiban bagi profesional cybersecurity. Tools ini digunakan baik oleh penyerang maupun pembela sistem.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Kunci perbedaan antara White Hat dan Black Hat bukan pada alat yang digunakan, melainkan <span class="text-white font-bold">izin</span> dan <span class="text-white font-bold">tujuannya</span>.
+                    </p>
+                </div>
+                <div class="mt-auto border-l-4 border-accent pl-4 py-3 bg-gray-900 bg-opacity-50">
+                    <p class="font-mono text-xs text-accent mb-1">DISCLAIMER PENTING</p>
+                    <p class="text-white font-bold italic text-sm">"Menggunakan tools ini pada target tanpa izin tertulis adalah tindakan ilegal."</p>
+                </div>
+            </div>
+            
+            <!-- Right Column: Tools Grid -->
+            <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 content-center right-column">
+                <!-- Tool Category 1: Recon & Scan -->
+                <div class="feature-card p-4 rounded-xl flex flex-col gap-2">
+                    <div class="flex justify-between items-start">
+                        <div class="icon-wrapper w-10 h-10 rounded-lg flex items-center justify-center text-accent">
+                            <i class="fas fa-radar text-lg"></i>
+                        </div>
+                        <span class="text-gray-600 text-xs font-mono">RECON</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-base mb-1">Reconnaissance &amp; Scanning</h4>
+                        <p class="text-gray-400 text-xs leading-5">
+                            <span class="text-accent font-mono font-bold">Nmap</span> untuk network mapping, <span class="text-accent font-mono font-bold">Shodan</span> untuk IoT search, dan teknik OSINT untuk pengumpulan intelijen publik.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tool Category 2: Web & App -->
+                <div class="feature-card p-4 rounded-xl flex flex-col gap-2">
+                    <div class="flex justify-between items-start">
+                        <div class="icon-wrapper w-10 h-10 rounded-lg flex items-center justify-center text-accent">
+                            <i class="fas fa-globe text-lg"></i>
+                        </div>
+                        <span class="text-gray-600 text-xs font-mono">WEB</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-base mb-1">Web App Security</h4>
+                        <p class="text-gray-400 text-xs leading-5">
+                            <span class="text-accent font-mono font-bold">Burp Suite</span> dan <span class="text-accent font-mono font-bold">OWASP ZAP</span> untuk interception proxy dan vulnerability scanning pada aplikasi web.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tool Category 3: Exploitation -->
+                <div class="feature-card p-4 rounded-xl flex flex-col gap-2">
+                    <div class="flex justify-between items-start">
+                        <div class="icon-wrapper w-10 h-10 rounded-lg flex items-center justify-center text-accent">
+                            <i class="fas fa-bug text-lg"></i>
+                        </div>
+                        <span class="text-gray-600 text-xs font-mono">EXPLOIT</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-base mb-1">Exploitation Frameworks</h4>
+                        <p class="text-gray-400 text-xs leading-5">
+                            <span class="text-accent font-mono font-bold">Metasploit</span> untuk pengembangan dan eksekusi kode eksploitasi, serta pengujian penetrasi otomatis.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tool Category 4: Monitoring & Analysis -->
+                <div class="feature-card p-4 rounded-xl flex flex-col gap-2">
+                    <div class="flex justify-between items-start">
+                        <div class="icon-wrapper w-10 h-10 rounded-lg flex items-center justify-center text-accent">
+                            <i class="fas fa-network-wired text-lg"></i>
+                        </div>
+                        <span class="text-gray-600 text-xs font-mono">NETWORK</span>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-base mb-1">Network &amp; Forensics</h4>
+                        <p class="text-gray-400 text-xs leading-5">
+                            <span class="text-accent font-mono font-bold">Wireshark</span> untuk analisis paket jaringan, <span class="text-accent font-mono font-bold">Autopsy</span> untuk forensik digital, dan <span class="text-accent font-mono font-bold">Ghidra</span> untuk reverse engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+<div class="relative z-20 w-full px-4 md:px-12 py-6 flex justify-between items-center bg-gradient-to-t from-black to-transparent">
+    <!-- Back Button -->
+    <div>
+        <button onclick="window.location.href='pt97.html'" class="bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white px-4 py-2 rounded-md font-mono text-sm transition-colors cursor-not-allowed opacity-50" disabled>
+            <i class="fas fa-chevron-left mr-2"></i>Back
+        </button>
+    </div>
+    
+    <!-- Status Info -->
+    <div class="flex flex-col gap-1 text-xs font-mono text-gray-500">
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span>SYSTEM STATUS: SECURE</span>
+        </div>
+        <p>CONFIDENTIAL // PRESENTATION_MODE</p>
+    </div>
+    
+    <!-- Next Button -->
+    <div>
+        <button onclick="window.location.href='pt99.html'" class="bg-accent hover:bg-opacity-90 text-white px-4 py-2 rounded-md font-mono text-sm transition-colors">
+            Next<i class="fas fa-chevron-right ml-2"></i>
+        </button>
+    </div>
+</div>
+        <!-- Footer -->
+        <div class="px-6 md:px-12 py-4 md:py-6 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center bg-black relative z-20">
+            <div class="flex items-center gap-2 mb-2 md:mb-0">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <p class="text-xs font-mono text-gray-600">SECTION 17: TOOLS</p>
+            </div>
+            <p class="font-mono text-sm text-gray-400">By <span class="text-accent font-bold">HackDev</span> 2025</p>
+        </div>
+    </div>
+</body>
+</html>
